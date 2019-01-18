@@ -1,0 +1,73 @@
+omg: 1
+lifecycle:
+  startup:
+    command: ["node", "index.js"]
+info:
+  version: 1.0.0
+  title: Git project management  
+  description: This service is for clone, commit repository
+  contact:
+    name: Deva Chormale
+    url: https://github.com/devaht
+    email: kchormale@heaptrace.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+actions:
+  createrepo:
+    help: Creating the repository with user
+    arguments:
+      content:
+        type: string
+        in: requestBody
+        help: The 
+    http:
+      port: 5000
+      method: POST
+      path: /create-repo
+      contentType: application/json
+    output:
+      type: string
+  getrepo:
+    help: Getting repository detail info
+    arguments:
+      content:
+        type: string
+        in: requestBody
+        help: The 
+    http:
+      port: 5000
+      method: POST
+      path: /get-repo
+      contentType: application/json
+    output:
+      type: string
+  deleterepo:
+    help: Creating branch with particular repository.
+    arguments:
+      content:
+        type: string
+        in: requestBody
+        help: The 
+    http:
+      port: 5000
+      method: POST
+      path: /delete-repo
+      contentType: application/json
+    output:
+      type: string
+  createbranch:
+    help: Creating branch with particular repository.
+    arguments:
+      content:
+        type: string
+        in: requestBody
+        help: The 
+    http:
+      port: 5000
+      method: POST
+      path: /create-branch
+      contentType: application/json
+    output:
+      type: string
+
